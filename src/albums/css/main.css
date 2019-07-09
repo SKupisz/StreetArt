@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("../../mainSite/css/nav.css");
+body{
+  margin: 0;
+  padding: 0;
+}
+.main-content,.extender{
+  width: 100%;
+  height: calc(100% - 67px);
+}
+.extender{
+  background: url("../../imgForDecoration/flowers.jpg");
+  background-size: cover;
+  font-size: 'Oswald',sans-serif;
+  filter: brightness(80%);
+  top: 100%;
+  height: 100%;
+  position: absolute;
+  top: 67px;
+  left: 0px;
+}
+.main-content::before{
+  content: '';
+  background: url("../../imgForDecoration/flowers.jpg");
+  background-size: cover;
+  font-size: 'Oswald',sans-serif;
+  filter: brightness(80%);
+  width: 100%;
+  height: calc(100% - 67px);
+  position: absolute;
+  top: 67px;
+  left: 0px;
+}
+.extender::before{
+  top: 100%;
+  height: 100%;
+}
+.failed-connection{
+  color: white;
+  position: relative;
+  top: 67px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'Oswald',sans-serif;
+  padding: 20px 0px 20px 0px;
+}
+.fail-desc{
+  font-size: 3em;
+}
+.fail-content{
+  font-size: 2em;
+}
+.slides-header{
+  font-size: 2.3em;
+  color: white;
+  font-family: 'Oswald',sans-serif;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slides-wrapper{
+  width: 100%;
+  position: relative;
+  top: 67px; left: 0px;
+  z-index: 1;
+}
+.slides-mainContent{
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+}
+.one-slide{
+  width: 400px;
+  height: 400px;
+  background: rgba(1,1,1,.4);
+  margin: 20px;
+  text-align: center;
+  font-family: 'Oswald',sans-serif;
+  margin-top: 50px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.43s;
+}
+div[class="one-slide"]:hover{
+  transform: scale(0.97);
+}
+.slide-title{
+  font-size: 2.1em;
+  color: rgb(200,200,200);
+  letter-spacing: 0.03em;
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("../../mainSite/css/nav.css");
+@import url("./searchMenu.css");
+@import url("./showing.css");
+body{
+  margin: 0;
+  padding: 0;
+}
+.main-content{
+  width: calc(100% - 20px);
+  height: calc(100% - 87px);
+  position: absolute;
+  top: 67px;
+  left: 0px;
+  text-align: center;
+  padding: 10px;
+}
+.albumName-inputPart{
+  font-size: 1.4em;
+  font-family: 'Oswald',sans-serif;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.albumName-submitBtnPart{
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 1.3em;
+  font-family: 'Oswald',sans-serif;
+  cursor: pointer;
+  background: #ccc;
+  transition: filter 0.43s;
+}
+button[class="albumName-submitBtnPart"]:hover{
+  filter: brightness(60%);
+}
+button[class="albumName-submitBtnPart"]:focus{
+  outline: none;
+}

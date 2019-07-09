@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("../../mainSite/css/nav.css");
+@import url("./form.css");
+a{
+  text-decoration: none;
+  color: white;
+}
+.error{
+  color: red;
+  width: 100%;
+  text-align: center;
+  font-size: 1em;
+  font-family: 'Oswald',sans-serif;
+}
+.main-content{
+  width: 100%;
+  margin-top: 67px;
+}
+.main-header{
+  font-family: 'Oswald',sans-serif;
+  font-size: 2em;
+  width: 100%;
+  text-align: center;
+}
+.howManyForStart{
+  width: 100%;
+  text-align: center;
+}
+.startInput-container{
+  font-size: 1em;
+  font-family: 'Oswald',sans-serif;
+  margin-bottom: 10px;
+}
+.forStart-quantity{
+  border: none;
+  border-radius: 5px;
+  background: #aaa;
+  text-align: center;
+  font-family: 'Oswald',sans-serif;
+  font-size: 1em;
+  padding: 5px;
+  margin-left: 5px;
+}
+.forStar-quantity:focus{
+  outline: none;
+}
+.forStart-submit{
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1em;
+  font-family: 'Oswald',sans-serif;
+  transition: filter 0.34s;
+}
+button[class="forStart-submit"]:hover{
+  filter: brightness(60%);
+}
+.done-header{
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Oswald',sans-serif;
+}

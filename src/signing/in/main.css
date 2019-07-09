@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("./nav.css");
+@import url("../../mainSite/css/nav.css");
+body{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.signing-content{
+  width: 100%;
+  height: calc(100% - 67px);
+}
+.signing-content::before{
+  content: "";
+  position: absolute;
+  top: 67px; left: 0;
+  width: calc(100% - 10px); height: calc(100% - 77px);
+  padding: 5px;
+  background-image: url("../../imgForDecoration/coloseum.jpg");
+  background-size: cover;
+  filter: brightness(20%);
+}
+.main-header{
+  font-size: 2em;
+  font-family: 'Oswald',sans-serif;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin-bottom: 7px;
+}
+.signing-mainContent{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  text-align: center;
+}
+.signing-input{
+  font-size: 1.4em;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 40%;
+  background: rgba(250,250,250,.2);
+}
+.signing-input:focus{
+  outline: none;
+}
+.signing-submitBtn{
+  width: 20%;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.4em;
+  font-family: 'Oswald',sans-serif;
+  background: white;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: filter 0.43s;
+  background: rgba(250,250,250,.6);
+  letter-spacing: 0.03em;
+}
+button[class="signing-submitBtn"]:hover{
+  filter: brightness(50%);
+}
+.main-header,.signing-mainContent
+{
+  position: relative;
+  top: 67px;
+}
+.error{
+  color: red;
+  font-size: 1.04em;
+  font-family: 'Oswald',sans-serif;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}

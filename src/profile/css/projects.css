@@ -1,0 +1,38 @@
+.slides-header{
+  font-size: 2.3em;
+  color: white;
+  font-family: 'Oswald',sans-serif;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slides-wrapper{
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  top: calc(100% - 10px); left: 0px;
+}
+.slides-mainContent{
+  width: 100%;
+  text-align: center;
+}
+.one-slide{
+  width: 400px;
+  height: 400px;
+  background: rgba(1,1,1,.4);
+  margin: 20px;
+  text-align: center;
+  font-family: 'Oswald',sans-serif;
+  margin-top: 50px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.43s;
+}
+div[class="one-slide"]:hover{
+  transform: scale(0.97);
+}
+.slide-title{
+  font-size: 2.1em;
+  color: rgb(200,200,200);
+  letter-spacing: 0.03em;
+}

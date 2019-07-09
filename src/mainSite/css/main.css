@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("./nav.css");
+body{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+.section-container{
+  width: 100%;
+  height: 500px;
+}
+.section-container::before {
+  content: "";
+  position: absolute;
+  top: 67px; left: 0;
+  width: calc(100% - 10px); height: 490px;
+  padding: 5px;
+}
+.for-welcome::before{
+  filter: brightness(40%);
+  background-image: url("../../imgForDecoration/mountains-min.jpg");
+  background-size: cover;
+}
+.describing-page::before{
+  top: 567px;
+  background-image: url("../../imgForDecoration/mountains2-min.jpg");
+  background-size: cover;
+  filter: brightness(30%);
+}
+.main-header,.describe-content{
+  color: white;
+  font-size: 3em;
+  font-family: 'Oswald',sans-serif;
+  filter: brightness(200%);
+  margin: 10px;
+  margin-left: 50px;
+  margin-top: 67px;
+  margin-bottom: 40px;
+}
+.popular-header{
+  float: right;
+}
+.describe-content{
+  font-size: 2em;
+  margin: 7px;
+  font-family: 'Oswald',sans-serif;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}

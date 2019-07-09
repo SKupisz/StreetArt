@@ -1,0 +1,46 @@
+.totalViews-stats{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+.total-views,.total-likes{
+    width: inherit;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-family: 'Oswald',sans-serif;
+}
+.stats-wrapper{
+    width: inherit;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 50px;
+}
+.stats-column{
+    text-align: center;
+    font-size: 0.8em;
+    font-family: 'Oswald',sans-serif;
+    letter-spacing: 0.07em;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 100px;
+}
+.margin-top{
+    width: inherit;
+    background: rgb(11,11,255);
+}
+.quantity-showing{
+    width: inherit;
+    border-radius: 5px 5px 1px 1px;
+}
+.not-enough-data{
+    width: inherit;
+    text-align: center;
+    font-size: 1.6em;
+    font-family: 'Oswald',sans-serif;
+  }

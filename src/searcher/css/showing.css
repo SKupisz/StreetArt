@@ -1,0 +1,38 @@
+a{
+  text-decoration: none;
+}
+.showing-results{
+  width: 80%;
+  height: 100%;
+  float: left;
+}
+.resultsSlides,.resultsUsers{
+  font-family: 'Oswald',sans-serif;
+  font-size: 1em;
+}
+.resultsUsers{
+  display: none;
+}
+.resultsRow{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100px;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  color: black;
+  transition: filter 0.43s;
+}
+.resultsSlides div:hover{
+  filter: sepia(100%);
+}
+.resultsRow-title{
+  font-size: 1.7em;
+}
+.resultsRow-user{
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.noResultHeader{
+  font-size: 1.8em;
+}

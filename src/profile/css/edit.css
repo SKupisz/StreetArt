@@ -1,0 +1,50 @@
+.edit-infoInput{
+  font-size: 1.1em;
+  padding: 5px;
+  font-family: 'Oswald',sans-serif;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255,255,255,.5);
+  width: 80%;
+  margin-bottom: 5px;
+}
+.info-webLink{
+  color: rgba(10,110,255,1);
+}
+.desc-Textarea{
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: 'Oswald',sans-serif;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  background: rgba(255,255,255,.5);
+  width: 80%;
+  max-width: 90%;
+  min-width: 80%;
+  margin-top: 10px;
+  resize: none;
+}
+.desc-Textarea:focus{
+  outline: none;
+}
+.desc-Textarea::-webkit-scrollbar {
+  width: 10px;
+}
+
+.desc-Textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.desc-Textarea::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.desc-Textarea::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.doNotSaveDesc:focus{
+  outline: none;
+}

@@ -1,0 +1,92 @@
+a{
+  text-decoration: none;
+}
+.main-navbar{
+  width: 100%;
+  height: 67px;
+  position: fixed;
+  top: 0px; left: 0px;
+  background: #111;
+  color: white;
+  font-family: 'Lato',sans-serif;
+  z-index: 2;
+}
+.nav-item{
+  height: 67px;
+  margin-left: 10px;
+  display: inline-block;
+}
+.main-navbar button
+{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Lato',sans-serif;
+  cursor: pointer;
+  transition: filter 0.43s;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.main-navbar button:focus{
+  outline: none;
+}
+.main-navbar button:hover{
+  filter: brightness(190%);
+}
+.main-navbar form,.signing-in,.signing-up,.create-dropDown{
+  float: right;
+  margin-right: 10px;
+}
+.albumName-input{
+  -ms-transform: translateY(10%);
+  transform: translateY(10%);
+  font-size: 20px;
+  font-family: 'Lato',sans-serif;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+.main-navbar form{
+  margin-right: 40px;
+}
+.create-dropDown{
+  height: 67px;
+  font-size: 2em;
+  vertical-align: middle;
+  cursor: pointer;
+  line-height: 67px;
+  width: 30px;
+  text-align: center;
+}
+.prof-dropItem{
+  position: absolute;
+  top: 67px;
+  left: calc(90% - 60px);
+  z-index: 3;
+  display: none;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Oswald',sans-serif;
+  transition: all 0.3s;
+  height: 50px;
+}
+.stats{
+  top: 117px;
+}
+.create-dropDown button{
+  background: #eee;
+  font-size: 0.7em;
+  color: black;
+  width: 10%;
+  font-family: 'Oswald',sans-serif;
+  transition: all 0.3s;
+}
+.create-dropDown button:hover{
+  filter: brightness(70%);
+}
+div[class="nav-item create-dropDown"]:hover .prof-dropItem{
+  display: block;
+}

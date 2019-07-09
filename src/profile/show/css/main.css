@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("../../../mainSite/css/nav.css");
+@import url("./stats.css");
+body{
+  margin: 0;
+  padding: 0;
+}
+.main-content{
+  width: 100%;
+  position: relative;
+  top: 67px;
+  font-family: 'Oswald',sans-serif;
+}
+.welcome-header{
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+}
+.stats-container{
+  width: calc(100% - 60px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  border: 1px solid black;
+  padding: 20px; 
+  font-size: 1.3em;
+  font-family: 'Oswald',sans-serif;
+}
