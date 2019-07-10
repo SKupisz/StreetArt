@@ -77,6 +77,7 @@ else {
       $insert = $connection->query("INSERT INTO users VALUES(NULL,'$login','$email','$pass','No direction yet',0,"No describe","")");
       if(!$insert) throw new Exception($connection->error);
       $_SESSION['signed_up'] = $login;
+      setCookie("signed_up_already",$value,time()+(86400*30),"/");
       mysqli_close($connection);
       header("Location: ../../../");
       exit();

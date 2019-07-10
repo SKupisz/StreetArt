@@ -14,7 +14,6 @@ $login = $_POST['login'];
 $pass = $_POST['password'];
 $login = htmlentities($login);
 $connect = require_once "../../mainComponents/connect.php";
-
 try {
   $connection = new mysqli($connect["host"],
   $connect["db_user"],$connect["db_password"],

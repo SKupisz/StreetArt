@@ -33,9 +33,18 @@ function likeThisSlide(str){
   let xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+      if(this.response == "like")
+      {
         document.querySelector(".star-img").src = "../src/imgForDecoration/star.png";
+      }
+      else
+      {
+        document.querySelector(".star-img").src = "../src/imgForDecoration/non-star.png";
+      }
+        
     }
   };
   xmlhttp.open("GET", "../src/show/like.php?n="+str, true);
   xmlhttp.send();
+  
 }

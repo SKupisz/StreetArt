@@ -39,7 +39,6 @@ $connect["db_password"],$connect["db_name"]);
       $increment = $connection->query("UPDATE slides SET views = views + 1 WHERE id = $id");
       if(!$increment) throw new Exception($connection->error);
       $nameOfTable = $username."_showing";
-      echo $nameOfTable;
       $date = date("Y/m/d");
       $forCheck = $connection->query("SELECT * FROM $nameOfTable WHERE date = '$date'");
       if(!$forCheck) throw new Exception($connection->error);
@@ -53,10 +52,21 @@ $connect["db_password"],$connect["db_name"]);
         $update = $connection->query("UPDATE $nameOfTable SET quantity = quantity + 1 WHERE date = '$date'");
         if(!$update) throw new Exception($connection->error);
       }
+      $signedUser = $_SESSION["signed_up"];
+      $checkIfLiked = $connection->query("SELECT * FROM sent_likes WHERE fromm = '$signedUser' and forWhichSlide = $id");
+      if(!$checkIfLiked) throw new Exception($connection->error);
+      if($checkIfLiked->num_rows == 0)
+      {
+        $liked = 0;
+      }
+      else
+      {
+        $liked = 1;
+      }
     }
   }
 } catch (Exception $e) {
   $isConnect = 0;
 }
-
+$cookieName = $name."_liked";
 ?>

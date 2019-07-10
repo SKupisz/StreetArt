@@ -1,4 +1,5 @@
 <?php
+require_once "../src/signing/cookie.php";
 require_once "../src/show/loadData.php";
 ?>
 <!DOCTYPE html>
@@ -25,7 +26,15 @@ require_once "../src/show/loadData.php";
         ?>
         <section class = "star-container">
           <div class = "star-wrapper">
-          <img src = "../src/imgForDecoration/non-star.png" class = "star-img" onclick = "likeThisSlide(<?php echo $_GET['n'];?>);"/>
+          <?php 
+          if(isset($_COOKIE[$cookieName]) || $liked == 1) {
+           ?> <img src = "../src/imgForDecoration/star.png" class = "star-img" onclick = "likeThisSlide('<?php echo $_GET['n'];?>');"/><?php    
+          }
+          else {
+            ?> <img src = "../src/imgForDecoration/non-star.png" class = "star-img" onclick = "likeThisSlide('<?php echo $_GET['n'];?>');"/><?php
+          }
+          ?>
+         
       </div>
         </section>
         <?php

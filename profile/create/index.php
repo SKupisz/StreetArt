@@ -14,7 +14,7 @@ if(!isset($_SESSION['signed_up']))
     <link rel = "stylesheet" href = "../../src/profile/createcss/main.css"/>
   </head>
   <body>
-    <?php require_once "../../src/mainComponents/nav.php";?>
+    <?php require_once "../../src/profile/logic/navSupport.php";?>
     <section class = "main-content">
       <?php
       if(isset($_SESSION['slide_error']))
