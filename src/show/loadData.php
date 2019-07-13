@@ -40,17 +40,22 @@ $connect["db_password"],$connect["db_name"]);
       if(!$increment) throw new Exception($connection->error);
       $nameOfTable = $username."_showing";
       $date = date("Y/m/d");
-      $forCheck = $connection->query("SELECT * FROM $nameOfTable WHERE date = '$date'");
-      if(!$forCheck) throw new Exception($connection->error);
-      if($forCheck->num_rows == 0){
-        
-        $insert = $connection->query("INSERT INTO $nameOfTable VALUES (NULL,'$date',1)");
-        if(!$insert) throw new Exception($connection->error);
-      }
-      else
+      $doesUserExist = $connection->query("SHOW TABLES LIKE '$nameOfTable'");
+      if(!$doesUserExist) throw new Exception($connection->error);
+      if($doesUserExist->num_rows != 0)
       {
-        $update = $connection->query("UPDATE $nameOfTable SET quantity = quantity + 1 WHERE date = '$date'");
-        if(!$update) throw new Exception($connection->error);
+        $forCheck = $connection->query("SELECT * FROM $nameOfTable WHERE date = '$date'");
+        if(!$forCheck) throw new Exception($connection->error);
+        if($forCheck->num_rows == 0){
+          
+          $insert = $connection->query("INSERT INTO $nameOfTable VALUES (NULL,'$date',1)");
+          if(!$insert) throw new Exception($connection->error);
+        }
+        else
+        {
+          $update = $connection->query("UPDATE $nameOfTable SET quantity = quantity + 1 WHERE date = '$date'");
+          if(!$update) throw new Exception($connection->error);
+        }
       }
       $signedUser = $_SESSION["signed_up"];
       $checkIfLiked = $connection->query("SELECT * FROM sent_likes WHERE fromm = '$signedUser' and forWhichSlide = $id");

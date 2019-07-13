@@ -31,6 +31,16 @@ try{
             $creator = $forID["fromm"];
             $forStatsName = $creator."_liking";
             $today = date("Y/m/d");
+            $doesUserExist = $connection->query("SHOW TABLES LIKE '$forStatsName'");
+            if(!$doesUserExist) throw new Exception($connection->error);
+            if($doesUserExist->num_rows == 0)
+            {
+                $insertToUserBase = 0;
+            }
+            else
+            {
+                $insertToUserBase = 1;
+            }
             if(isset($_SESSION["signed_up"]))
             {
                 $checkIfLiked = $connection->query("SELECT * FROM sent_likes WHERE fromm = '$name' AND forWhichSlide = $id");
@@ -41,8 +51,10 @@ try{
                     if(!$like) throw new Exception($connection->error);
                     $update = $connection->query("UPDATE slides SET likes = likes + 1 WHERE id = $id");
                     if(!$update) throw new Exception($connection->error);
-                    $secondUpdate = $connection->query("UPDATE $forStatsName SET quantity = quantity + 1 WHERE date = '$today'");
-                    if(!$secondUpdate) throw new Exception($connection->error);
+                    if($insertToUserBase == 1){
+                        $secondUpdate = $connection->query("UPDATE $forStatsName SET quantity = quantity + 1 WHERE date = '$today'");
+                        if(!$secondUpdate) throw new Exception($connection->error);
+                    }
                     echo "like";
                 }
                 else
@@ -53,8 +65,10 @@ try{
                     if(!$dislike) throw new Exception($connection->error);
                     $update = $connection->query("UPDATE slides SET likes = likes - 1 WHERE id = $id");
                     if(!$update) throw new Exception($connection->error);
-                    $secondUpdate = $connection->query("UPDATE $forStatsName SET quantity = quantity - 1 WHERE date = '$today'");
-                    if(!$secondUpdate) throw new Exception($connection->error);
+                    if($insertToUserBase == 1){
+                        $secondUpdate = $connection->query("UPDATE $forStatsName SET quantity = quantity - 1 WHERE date = '$today'");
+                        if(!$secondUpdate) throw new Exception($connection->error);
+                    }
                     echo "dislike";  
                 }
             }

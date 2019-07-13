@@ -1,0 +1,67 @@
+.section-header{
+  width: inherit;
+  text-align: center;
+  font-size: 1.4em;
+  font-family: 'Oswald',sans-serif;
+  margin-bottom: 7px;
+}
+.password-inputs,.button-container{
+    width: calc(95% - 20px);
+    text-align: center;
+}
+.accountSettings-input{
+    padding: 9px;
+    font-size: 0.7em;
+    font-family: 'Oswald',sans-serif;
+    border-radius: 5px;
+    border: 1px solid black;
+    background: rgba(255,255,255,.3);
+}
+.changePass-btn{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Oswald',sans-serif;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: filter 0.43s;
+    font-size: 0.7em;
+}
+button[class="changePass-btn"]:hover{
+    filter: brightness(60%);
+}
+.error,.success{
+    font-size: 0.9em;
+}
+.error{
+    color: red;
+}
+.subsection-desc,.sending{
+    display: inline-block;
+}
+.dangersection-btn{
+    /*code inspired by: github.com*/
+    background-position: -1px -1px;
+    background-repeat: repeat-x;
+    background-size: 110% 110%;
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: .25em;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.8em;
+    line-height: 1em;
+    padding: 9px;
+    position: relative;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-family: 'Oswald',sans-serif;
+    transition: filter 0.43s;
+}
+button[class="dangersection-btn"]:hover{
+    filter: brightness(70%);
+}
+.subheader{
+    margin-left: 30px;
+}

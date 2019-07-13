@@ -31,6 +31,11 @@
           Statistics
         </button>
       </a>
+      <a href = "../profile/settings">
+            <button class = "prof-dropItem settings">
+              Settings
+            </button>
+      </a>
     </div>
     <a href = "../profile/">
       <button class = "nav-item signing-up">

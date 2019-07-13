@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once "./src/signing/cookie.php";
 ?>
 <!DOCTYPE html>
@@ -41,6 +40,11 @@ require_once "./src/signing/cookie.php";
           <a href = "profile/show">
             <button class = "prof-dropItem stats">
               Statistics
+            </button>
+          </a>
+          <a href = "profile/settings">
+            <button class = "prof-dropItem settings">
+              Settings
             </button>
           </a>
         </div>

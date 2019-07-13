@@ -25,6 +25,10 @@ $connect["db_password"],$connect["db_name"]);
     if(!$stats) throw new Exception($connection->error);
     $likes = $connection->query("SELECT * FROM $nameOfLiking ORDER BY date DESC");
     if(!$likes) throw new Exception($connection->error);
+    $averageViews = $connection->query("SELECT AVG(quantity) FROM $nameOfTable");
+    if(!$averageViews) throw new Exception($connection->error);
+    $averageLikes = $connection->query("SELECT AVG(quantity) FROM $nameOfLiking");
+    if(!$averageLikes) throw new Exception($connection->error);
     $dates = array();
     $views = array();
     $likesTable = array();
@@ -51,6 +55,22 @@ $connect["db_password"],$connect["db_name"]);
     $likeRow = $highestLiked->fetch_assoc();
     $theHighestLiked = $likeRow["MAX(likes)"];
     $theHighestLikedName = $likeRow["name"];
+
+    $avgViewsRow = $averageViews->fetch_assoc();
+    $avgViews = $avgViewsRow["AVG(quantity)"];
+    if($avgViews == null)
+    {
+      $avgViews = 0;
+    }
+    $avgViews = round($avgViews);
+
+    $avgLikesRow = $averageLikes->fetch_assoc();
+    $avgLikes = $avgLikesRow["AVG(quantity)"];
+    if($avgLikes == null)
+    {
+      $avgLikes = 0;
+    }
+    $avgLikes = round($avgLikes);
   }
 } catch(Exception $e){
   $isConnect = 0;

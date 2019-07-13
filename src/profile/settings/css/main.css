@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("../../../mainSite/css/nav.css");
+@import url("./sections.css");
+body{
+  margin: 0;
+  padding: 0;
+}
+.main-content{
+  width: 100%;
+  position: relative;
+  top: 67px;
+  font-family: 'Oswald',sans-serif;
+}
+.welcome-header{
+  font-size: 2em;
+  text-align: center;
+  width: calc(95% - 20px);
+  margin-bottom: 20px;
+}
+.user-data,.account-settings,.dangerous-one{
+  width: calc(95% - 20px);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-size: 1.9em;
+  font-family: 'Oswald',sans-serif;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.dangerous-one{
+  border-color: red;
+}

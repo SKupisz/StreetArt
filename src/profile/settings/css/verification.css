@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background: url("../../../imgForDecoration/flowers.jpg");
+    background-size: cover;
+    filter: brightness(70%);
+}
+form{
+    width: 40%;
+    height: 400px;
+    background: rgba(255,255,255,.7);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #eee;
+    padding: 10px;
+    font-family: 'Oswald',sans-serif;
+    text-align: center;
+}
+.main-header{
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+.desc{
+    width: 100%;
+    text-align: center;
+    font-size: 1.4em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.password-input{
+    border: none;
+    background: white;
+    font-size: 1em;
+    font-family: 'Oswald',sans-serif;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 200px;
+    transition: box-shadow 0.3s;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+.password-input:focus{
+    outline: none;
+    box-shadow: 1px 1px 10px #111;
+}
+.submit-btn{
+    padding: 20px;
+    font-size: 1.3em;
+    font-family: 'Oswald',sans-serif;
+    border-radius: 5px;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+button[class="submit-btn"]:hover{
+    filter: brightness(70%);
+}
+.error{
+    color: red;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 7px;
+}
+@media only screen and (max-width: 628px){
+    form{
+        width: 60%;
+    }
+    .password-input{
+        font-size: 1.5em;
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 465px){
+    form{
+        width: 80%;
+        margin-top: 50px;
+    }
+}

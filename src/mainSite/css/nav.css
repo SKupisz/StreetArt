@@ -76,6 +76,9 @@ a{
 .stats{
   top: 117px;
 }
+.settings{
+  top: 167px;
+}
 .create-dropDown button{
   background: #eee;
   font-size: 0.7em;

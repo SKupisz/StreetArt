@@ -74,8 +74,20 @@ else {
         exit();
       }
       $pass = password_hash($pass,PASSWORD_DEFAULT);
-      $insert = $connection->query("INSERT INTO users VALUES(NULL,'$login','$email','$pass','No direction yet',0,"No describe","")");
+      $insert = $connection->query("INSERT INTO users VALUES(NULL,'$login','$email','$pass','No direction yet',0,'No describe','')");
       if(!$insert) throw new Exception($connection->error);
+      $showing = $login."_showing";
+      $sql = "CREATE TABLE $showing ( id INT NOT NULL AUTO_INCREMENT , date TEXT CHARACTER SET
+      utf8 COLLATE utf8_polish_ci NOT NULL ,quantity INT NOT NULL,PRIMARY KEY (id)) ENGINE = InnoDB CHARSET=utf8
+      COLLATE utf8_polish_ci;";
+      $createShowing = $connection->query($sql);
+      if(!$createShowing) throw new Exception($connection->error);
+      $liking = $login."_liking";
+      $sql = "CREATE TABLE $liking ( id INT NOT NULL AUTO_INCREMENT , date TEXT CHARACTER SET
+      utf8 COLLATE utf8_polish_ci NOT NULL ,quantity INT NOT NULL,PRIMARY KEY (id)) ENGINE = InnoDB CHARSET=utf8
+      COLLATE utf8_polish_ci;";
+      $createLiking = $connection->query($sql);
+      if(!$createLiking) throw new Exception($connection->error);
       $_SESSION['signed_up'] = $login;
       setCookie("signed_up_already",$value,time()+(86400*30),"/");
       mysqli_close($connection);

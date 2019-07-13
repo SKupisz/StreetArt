@@ -108,12 +108,16 @@ require_once "../../src/profile/show/logic/loadData.php";
               $quantity = $views[$i];
               $date = $dates[$i];
               ?><div class = "stats-column column<?php echo $i+1;?>" id = "column<?php echo $quantity;?>" v-bind:title="message">
+              <?php echo $quantity;?>
               <div class = "margin-top">
               </div>
               <div class = "quantity-showing"><?php echo $date; ?></div>
               </div><?php
             }
-            ?></section><?php
+            ?></section>
+                    <section class = "average-section average-views">
+        Average views: <?php echo $avgViews; ?>
+        </section><?php
           }
 
         ?>
@@ -132,11 +136,15 @@ require_once "../../src/profile/show/logic/loadData.php";
               $quantity = $likesTable[$i];
               $date = $dates[$i];
               ?><div class = "stats-column column<?php echo $i+6;?>" id = "column<?php echo $quantity;?>" v-bind:title="message">
+              <?php echo $quantity;?>
               <div class = "margin-top"></div>
               <div class = "quantity-showing"><?php echo $date; ?></div>
               </div><?php
             }
-            ?></section><?php
+            ?></section>
+                                <section class = "average-section average-likes">
+        Average likes: <?php echo $avgLikes; ?>
+        </section><?php
           }
 
         ?>
