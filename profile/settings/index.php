@@ -63,9 +63,12 @@ require_once "../../src/profile/settings/logic/loadData.php";
             Clear my account
         </header>
         <p class = "subsection-desc">
-          Your slides will be vanished, and your stats will be reset
-        </p>        <!-- zrób ten skrypt na wyczyszczanie profilu, a potem to samo z deletem i na końcu ownershipem -->
-        </section>
+          Your slides will be deleted, and your stats will be reset
+        </p>
+        <form method = "post" action = "../../src/profile/settings/vanishAccount.php" class = "sending">
+        <button class = "dangersection-btn" name = "delete" type = "submit">Reset</button>
+        </form>        
+      </section>
         <section class = "drop">
           <header class = "subheader">
             Delete my account

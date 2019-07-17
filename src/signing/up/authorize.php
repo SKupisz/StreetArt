@@ -88,6 +88,11 @@ else {
       COLLATE utf8_polish_ci;";
       $createLiking = $connection->query($sql);
       if(!$createLiking) throw new Exception($connection->error);
+      $today = date("Y/m/d");
+      $exetuteShowing = $connection->query("INSERT INTO $showing VALUES(NULL,'$today',0)");
+      if(!$exetuteShowing) throw new Exception($connection->error);
+      $exetuteLikes = $connection->query("INSERT INTO $liking VALUES(NULL,'$today',0)");
+      if(!$exetuteLikes) throw new Exception($connection->error);
       $_SESSION['signed_up'] = $login;
       setCookie("signed_up_already",$value,time()+(86400*30),"/");
       mysqli_close($connection);

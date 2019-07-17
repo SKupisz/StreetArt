@@ -8,7 +8,7 @@ if(!isset($_POST['delete']) && !isset($_POST['permission'])){
     header("Location: ../../../profile/settings");
     exit();
 }
-else if((isset($_POST['delete']) && !isset($_POST["permission"])) || isset($_SESSION["password-error"])){
+else if((isset($_POST['delete']) && !isset($_POST["permission"])) || isset($_SESSION["password-error-vanish"])){
     
     ?>
     <html>
@@ -21,9 +21,9 @@ else if((isset($_POST['delete']) && !isset($_POST["permission"])) || isset($_SES
             <form method = "post" action = "">
                 <header class = "main-header">Verification</header>
                 <div class = "desc">Confirm password to continue</div>
-                <?php if(isset($_SESSION['password-error'])){
-                    ?><div class = "error"><?php echo $_SESSION["password-error"];?></div><?php
-                    unset($_SESSION["password-error"]);
+                <?php if(isset($_SESSION['password-error-vanish'])){
+                    ?><div class = "error"><?php echo $_SESSION["password-error-vanish"];?></div><?php
+                    unset($_SESSION["password-error-vanish"]);
                 } ?>
                 <input type = "password" name = "permission" class = "password-input" required placeholder = "Your password here"/>
                 <div class = "button-container">
@@ -36,11 +36,11 @@ else if((isset($_POST['delete']) && !isset($_POST["permission"])) || isset($_SES
 }
 else
 {
-    unset($_SESSION["password-error"]);
+    unset($_SESSION["password-error-vanish"]);
     $pass = $_POST['permission'];
     if(strlen($pass) < 8){
-        $_SESSION["password-error"] = "Incorrect password";
-        header("Location: deleteAccount.php");
+        $_SESSION["password-error-vanish"] = "Incorrect password";
+        header("Location: vanishAccount.php");
         exit();
     }
     $connect = require_once "../../mainComponents/connect.php";
@@ -57,30 +57,25 @@ else
             $showing = $name."_showing";
             $liking = $name."_liking";
             if(password_verify($pass,$checkRow['password'])){
-                $delete = $connection->query("DELETE FROM users WHERE nickname = '$name'");
-                if(!$delete) throw new Exception($connection->error);
                 $delSlides = $connection->query("DELETE FROM slides WHERE fromm = '$name'");
                 if(!$delSlides) throw new Exception($connection->error);
-                $deleteShowingStats = $connection->query("DROP TABLE $showing");
-                if(!$deleteShowingStats) throw new Exception($connection->error);
-                $deleteLikingStats = $connection->query("DROP TABLE $liking");
-                if(!$deleteLikingStats) throw new Exception($connection->error);
-                unset($_COOKIE['signed_up_already']);
-                setcookie("signed_up_already",null,-1,"/");
-                unset($_SESSION['signed_up']);
-                header("Location: ../../../");
+                $vanishShowing = $connection->query("UPDATE $showing SET quantity = 0 WHERE 1=1");
+                if(!$vanishShowing) throw new Exception($connection->error);
+                $likingShowing = $connection->query("UPDATE $liking SET quantity = 0 WHERE 1=1");
+                if(!$likingShowing) throw new Exception($connection->error);
+                header("Location: ../../../profile/show");
                 exit();
             }
             else
             {
-                $_SESSION["password-error"] = "Incorrect password";
-                header("Location: deleteAccount.php");
+                $_SESSION["password-error-vanish"] = "Incorrect password";
+                header("Location: vanishAccount.php");
                 exit();
             }
         }
     } catch (Exception $e){
-        $_SESSION["password-error"] = "Something went wrong. Try later";
-        header("Location: deleteAccount.php");
+        $_SESSION["password-error-vanish"] = "Something went wrong. Try later";
+        header("Location: vanishAccount.php");
         exit();   
     }
 }

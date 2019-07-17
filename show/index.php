@@ -41,7 +41,7 @@ require_once "../src/show/loadData.php";
       }
       else
       {
-        ?>Fail<?php
+        ?><div class = "failed">Failed to load the slideshow. Try later</div><?php
       }
 
       ?>
