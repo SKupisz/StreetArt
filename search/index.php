@@ -38,22 +38,34 @@ require_once "../src/searcher/loadData.php";
         <section class = "showing-results">
           <section class = "resultsSlides">
             <?php
-              for($i = 0 ; $i < count($firstTable); $i++)
-              {
-                $forNow = $firstTable[$i];
-                $nameForNow = $forNow["name"];
-                $creatorForNow = $forNow["fromm"];
-                $forAddress = $forNow["address"];
-                $forAddressExploded = explode("/",$forAddress);
-                $href = "../show/?u=".$forAddressExploded[1]."&n=".$forAddressExploded[2];
-                ?>
-                <a href = "<?php echo $href;?>" target="_blank">
-                <div class = "resultsRow slides-row">
-                  <header class = "resultsRow-title"><?php echo $nameForNow;?></header>
-                  <footer class = "resultsRow-user">By <?php echo $creatorForNow;?></footer>
-                </div>
-              </a><?php
+              if(count($firstTable) > 0){
+                for($i = 0 ; $i < count($firstTable); $i++)
+                {
+                  $forNow = $firstTable[$i];
+                  $nameForNow = $forNow["name"];
+                  $creatorForNow = $forNow["fromm"];
+                  $forAddress = $forNow["address"];
+                  $forAddressExploded = explode("/",$forAddress);
+                  $href = "../show/?u=".$forAddressExploded[1]."&n=".$forAddressExploded[2];
+                  ?>
+                  <a href = "<?php echo $href;?>" target="_blank">
+                  <div class = "resultsRow slides-row">
+                    <header class = "resultsRow-title"><?php echo $nameForNow;?></header>
+                    <footer class = "resultsRow-user">By <?php echo $creatorForNow;?></footer>
+                  </div>
+                </a><?php
+                }
               }
+              else
+              {
+                ?>
+                <div class = "resultsRow slides-row">
+                  <header class = "noResultHeader">Sorry</header>
+                  We couldn't find anything in the slides section matching your target.
+                </div>
+                <?php
+              }
+
             ?>
           </section>
           <section class = "resultsUsers">

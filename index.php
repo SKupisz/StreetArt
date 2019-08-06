@@ -7,20 +7,24 @@ require_once "./src/signing/cookie.php";
     <meta charset="utf-8">
     <title>StreetArt</title>
     <link rel = "stylesheet" href = "./src/mainSite/css/main.css"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" type = "image/png" href = "./src/imgForDecoration/logo.png"/>
   </head>
   <body>
     <nav class = "main-navbar">
       <a href = "">
         <button class = "nav-item mainSite">
-          StreetArt
+          <img src = "./src/imgForDecoration/logo.png" class = "mainSite-img"/> 
         </button>
       </a>
       <a href = "albums/">
-        <button class = "nav-item albums">
+        <button style = "" class = "nav-item albums">
           Albums
         </button>
       </a>
-
+      <div class = "responsiveMode-open">
+  -<br>-<br>-
+  </div>
       <?php
       if(isset($_SESSION['signed_up']))
       {
@@ -93,4 +97,5 @@ require_once "./src/signing/cookie.php";
       </div>
     </section>
   </body>
+  <script src = "./src/mainSite/js/responsiveNav.js"></script>
 </html>

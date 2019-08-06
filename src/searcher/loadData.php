@@ -1,10 +1,11 @@
 <?php
 session_start();
-if((!isset($_SESSION['firstData']) || !isset($_SESSION['userData'])) && !isset($_GET["q"])){
+if((!isset($_SESSION['firstData']) || !isset($_SESSION['userData'])) && !isset($_SESSION["search-error"])){
   $part = 2;
 }
 else if(!isset($_SESSION['firstData']) || !isset($_SESSION['userData']))
 {
+  $part = 3;
   $forSearch = $_GET["q"];
   $connect = require_once "../src/mainComponents/connect.php";
   $connected = 1;
@@ -17,9 +18,10 @@ else if(!isset($_SESSION['firstData']) || !isset($_SESSION['userData']))
     }
     else {
       $username = $_SESSION["signed_up"];
-      $firstSearching = $connection->query("SELECT * FROM slides WHERE name = '%$forSearch%'");
+      echo $forSearch;
+      $firstSearching = $connection->query("SELECT * FROM slides WHERE name LIKE '%$forSearch%' OR fromm LIKE '%$forSearch%'");
       if(!$firstSearching) throw new Exception($connection->error);
-      $userSearching = $connection->query("SELECT * FROM users WHERE nickname = '%$username%'");
+      $userSearching = $connection->query("SELECT * FROM users WHERE nickname LIKE '%$forSearch%'");
       if(!$userSearching) throw new Exception($connection->error);
       $firstTable = Array();
       $userTable = Array();

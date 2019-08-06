@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-@import url("./nav.css");
 @import url("../../mainSite/css/nav.css");
 body{
   margin: 0;
@@ -81,4 +80,21 @@ button[class="signing-submitBtn"]:hover{
   font-family: 'Oswald',sans-serif;
   letter-spacing: 0.1em;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 768px){
+  .signing-input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 634px){
+  .signing-submitBtn{
+    width: 40%;
+  }
+  .signing-input{
+    width: 80%;
+  }
 }

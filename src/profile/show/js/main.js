@@ -30,8 +30,16 @@ function loadChart(){
         let childTable = statsColumnsList[i].children;
         if(i < 5)
         {
-            childTable[0].style.height = ((takeTheQuantity/theHighest)*100)+"px";
-            childTable[1].style.height = (((theHighest - takeTheQuantity)/theHighest)*100)+"px";
+            if(theHighest == 0){
+                childTable[0].style.height = "1px";
+                childTable[1].style.height = "99px";
+            }
+            else
+            {
+                childTable[0].style.height = ((takeTheQuantity/theHighest)*100)+"px";
+                childTable[1].style.height = (((theHighest - takeTheQuantity)/theHighest)*100)+"px";
+            }
+
         }
         else
         {
@@ -45,11 +53,11 @@ function loadChart(){
         }
         var forPrepare = takeTheQuantity.toString();
         viewsStats[i] = forPrepare;
-        let newColumn = new Vue({
+        /*let newColumn = new Vue({
             el: ".column"+(i+1),
             data: {
                 message: forPrepare
             }
-        });
+        });*/
     }
 }

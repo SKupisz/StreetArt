@@ -18,7 +18,7 @@ a{
 }
 .main-navbar button
 {
-  background: none;
+  background: rgba(1,1,1,0);
   border: none;
   color: white;
   font-size: 1.5em;
@@ -37,6 +37,14 @@ a{
 .main-navbar form,.signing-in,.signing-up,.create-dropDown{
   float: right;
   margin-right: 10px;
+  display: inline-block;
+}
+.mainSite-img{
+  width: 67px;
+  height: auto;
+}
+.albums{
+  display: inline-block;
 }
 .albumName-input{
   -ms-transform: translateY(10%);
@@ -58,6 +66,7 @@ a{
   line-height: 67px;
   width: 30px;
   text-align: center;
+  display: inline-block;
 }
 .prof-dropItem{
   position: absolute;
@@ -92,4 +101,68 @@ a{
 }
 div[class="nav-item create-dropDown"]:hover .prof-dropItem{
   display: block;
+}
+.responsiveMode-open{
+  display: none;
+}
+.forResponsiveMode{
+  display: inline-block;
+}
+@media screen and (min-width: 983px){
+  .albums,.signing-in,.signing-up{
+    display: inline-block;
+  }
+  .signing-in,.signing-up,.create-dropDown{
+    float: right;
+    margin-right: 10px;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 982px){
+  .responsiveMode-open{
+    display: inline-block;
+    line-height: 13px;
+    font-size: 9em;
+    float: right;
+    cursor: pointer;
+    position: fixed;
+    top: 0px;
+    left: calc(100% - 57px);
+  }
+  .albums,.signing-in,.signing-up,.create-dropDown{
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+  }
+  .main-navbar form{
+    position: fixed;
+    top: 0px;
+    left: 300px;
+  }
+  .main-navbar button{
+    background: #111;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 768px){
+  .main-navbar form{
+    left: 200px;
+  }
+}
+@media screen and (max-width: 635px){
+  .main-navbar form{
+    left: 150px;
+  } 
+  .main-navbar form > .albumName-input{
+    width: 160px;
+  } 
+}
+@media screen and (max-width: 499px){
+  .main-navbar form {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+  }
 }

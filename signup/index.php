@@ -21,12 +21,13 @@ if(isset($_SESSION['backData']))
     <title>StreetArt</title>
     <link rel = "stylesheet" href = "../src/signing/in/main.css"/>
     <link rel = "stylesheet" href = "../src/signing/up/main.css"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
   </head>
   <body>
     <?php require_once "../src/mainComponents/nav.php";?>
     <section class = "signing-content">
       <header class = "main-header">
-        SIGN IN
+        SIGN UP
       </header>
       <form method="post" class = "signing-mainContent" action = "../src/signing/up/authorize.php">
         <input type = "text" class = "signing-input" name = "login" required placeholder="Login"

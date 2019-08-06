@@ -9,7 +9,9 @@
       Albums
     </button>
   </a>
-
+  <div class = "responsiveMode-open">
+  -<br>-<br>-
+  </div>
   <?php
   if(isset($_SESSION['signed_up']))
   {

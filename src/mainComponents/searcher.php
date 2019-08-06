@@ -6,6 +6,7 @@ if(!isset($_POST['albumName']))
   exit();
 }
 $forSearch = $_POST["albumName"];
+$forSearch = htmlentities($forSearch);
 $connect = require_once "./connect.php";
 try {
   $connection = new mysqli($connect["host"],$connect["db_user"],
@@ -15,7 +16,7 @@ try {
     throw new Exception($connection->connect_error);
   }
   else {
-    $firstSearching = $connection->query("SELECT * FROM slides WHERE name LIKE '%$forSearch%'");
+    $firstSearching = $connection->query("SELECT * FROM slides WHERE name LIKE '%$forSearch%' OR fromm LIKE '%$forSearch%'");
     if(!$firstSearching) throw new Exception($connection->error);
     $userSearching = $connection->query("SELECT * FROM users WHERE nickname LIKE '%$forSearch%'");
     if(!$userSearching) throw new Exception($connection->error);
@@ -36,7 +37,7 @@ try {
   }
 } catch (Exception $e) {
   $_SESSION['search-error'] = "Sorry, something went wrong. Try later";
-  header("Location: ../../");
+  header("Location: ../../search/");
   exit();
 }
 

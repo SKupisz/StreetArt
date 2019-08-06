@@ -9,7 +9,7 @@ a{
   height: calc(100% - 67px);
   width: 100%;
 }
-.main-content::before
+.main-content::before,.published-folders::before
 {
   content: '';
   position: absolute;
@@ -21,5 +21,10 @@ a{
   font-family: 'Oswald',sans-serif;
   filter: brightness(20%);
   background-image: url("../../imgForDecoration/flowers.jpg");
+  background-size: cover;
+}
+.published-folders::before{
+  top: calc(100% - 10px);
+  background-image: url("../../imgForDecoration/clifs.jpg");
   background-size: cover;
 }
