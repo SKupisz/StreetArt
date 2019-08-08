@@ -19,9 +19,9 @@ if(isset($_SESSION['backData']))
   <head>
     <meta charset="utf-8">
     <title>StreetArt</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
     <link rel = "stylesheet" href = "../src/signing/in/main.css"/>
     <link rel = "stylesheet" href = "../src/signing/up/main.css"/>
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
   </head>
   <body>
     <?php require_once "../src/mainComponents/nav.php";?>

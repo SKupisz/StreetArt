@@ -4,6 +4,8 @@
 body{
   margin: 0;
   padding: 0;
+  background: url("../../imgForDecoration/flowers.jpg");
+  background-size: cover;
 }
 .main-content,.extender{
   width: 100%;
@@ -91,4 +93,37 @@ div[class="one-slide"]:hover{
   font-size: 2.1em;
   color: rgb(200,200,200);
   letter-spacing: 0.03em;
+}
+.end{
+  margin-bottom: 0px;
+}
+@media screen and (max-width: 1333px){
+  .main-content::before{
+    background: none;
+  }
+}
+@media screen and (max-width: 483px){
+  .slides-header{
+    font-size: 1.8em;
+    text-align: center;
+  }
+  .one-slide{
+    width: 320px;
+    height: 320px;
+  }
+  .slide-title{
+    font-size: 1.9em;
+  }
+}
+@media screen and (max-width: 388px){
+  .slides-header{
+    font-size: 1.2em;
+  }
+  .one-slide{
+    width: 280px;
+    height: 280px;
+  }
+  .slide-title{
+    font-size: 1.7em;
+  }
 }

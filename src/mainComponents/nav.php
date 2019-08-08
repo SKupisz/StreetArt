@@ -1,11 +1,11 @@
 <nav class = "main-navbar">
   <a href = "../">
     <button class = "nav-item mainSite">
-      StreetArt
+     <img src = "../src/imgForDecoration/logo.png" class = "mainSite-img"/> 
     </button>
   </a>
   <a href = "../albums/">
-    <button class = "nav-item albums">
+    <button style = "" class = "nav-item albums">
       Albums
     </button>
   </a>
@@ -17,7 +17,7 @@
   {
     ?>
     <a href = "../src/mainComponents/logout.php">
-      <button class = "nav-item signing-in">
+      <button style = "" class = "nav-item signing-in">
         Logout
       </button>
     </a>
@@ -40,7 +40,7 @@
       </a>
     </div>
     <a href = "../profile/">
-      <button class = "nav-item signing-up">
+      <button style = "" class = "nav-item signing-up">
         Your profile
       </button>
     </a>
@@ -50,12 +50,12 @@
   else {
     ?>
     <a href = "../signup/">
-      <button class = "nav-item signing-up">
+      <button style = "" class = "nav-item signing-up">
         Sign up
       </button>
     </a>
     <a href = "../signin/">
-      <button class = "nav-item signing-in">
+      <button style = "" class = "nav-item signing-in">
         Sign in
       </button>
     </a>

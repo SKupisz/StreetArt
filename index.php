@@ -30,7 +30,7 @@ require_once "./src/signing/cookie.php";
       {
         ?>
         <a href = "src/mainComponents/logout.php">
-          <button class = "nav-item signing-in">
+          <button style = "" class = "nav-item signing-in">
             Logout
           </button>
         </a>
@@ -53,7 +53,7 @@ require_once "./src/signing/cookie.php";
           </a>
         </div>
         <a href = "profile/">
-          <button class = "nav-item signing-up">
+          <button style = "" class = "nav-item signing-up">
             Your profile
           </button>
         </a>
@@ -63,12 +63,12 @@ require_once "./src/signing/cookie.php";
       else {
         ?>
         <a href = "signup/">
-          <button class = "nav-item signing-up">
+          <button style = "" class = "nav-item signing-up">
             Sign up
           </button>
         </a>
         <a href = "signin/">
-          <button class = "nav-item signing-in">
+          <button style = "" class = "nav-item signing-in">
             Sign in
           </button>
         </a>

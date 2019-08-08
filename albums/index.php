@@ -7,6 +7,7 @@ require_once "../src/albums/loadData.php";
   <head>
     <meta charset="utf-8">
     <title>StreetArt</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
     <link rel = "stylesheet" href = "../src/albums/css/main.css"/>
   </head>
   <body>
@@ -41,7 +42,7 @@ require_once "../src/albums/loadData.php";
             $nameNow = $rowForNow["name"];
             ?>
             <a href = "<?php echo $href;?>">
-            <div class = "one-slide">
+            <div class = "one-slide <?php if($i == $howMany-1){?>end<?php }?>">
                   <header class = "slide-title">
                     <?php echo $nameNow; ?>
                   </header>
@@ -58,7 +59,7 @@ require_once "../src/albums/loadData.php";
     <?php
       if($howMany > 3)
       {
-        for($i = 0 ; $i < $howMany-1; $i++)
+        for($i = 0 ; $i < ($howMany /3)-1; $i++)
         {
           ?>
           <section class = "extender" style = "top: <?php echo ($i+1)*100;?>%;">
@@ -68,4 +69,5 @@ require_once "../src/albums/loadData.php";
       }
     ?>
   </body>
+  <script src = "../src/mainSite/js/responsiveNav.js"></script>
 </html>

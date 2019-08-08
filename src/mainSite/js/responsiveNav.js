@@ -7,9 +7,9 @@ document.querySelector(".responsiveMode-open").addEventListener("click",function
         mode = 1;
     }
     else{
-        document.querySelector(".albums").style.display = "none";
-        document.querySelector(".signing-up").style.display = "none";
-        document.querySelector(".signing-in").style.display = "none";
+        document.querySelector(".albums").classList.add("forResponsiveMode");
+        document.querySelector(".signing-up").classList.add("forResponsiveMode");
+        document.querySelector(".signing-in").classList.add("forResponsiveMode");
         mode = -1;
     }
 });
@@ -18,8 +18,13 @@ function checkIfRes(){
         document.querySelector(".albums").style.display = "inline-block";
         document.querySelector(".signing-in").style.display = "inline-block";
         document.querySelector(".signing-up").style.display = "inline-block";
+    }
+    else if(window.innerWidth < 983 && mode == -1 && document.querySelector(".albums").style.display == "inline-block"){
+        document.querySelector(".albums").style.display = "none";
+        document.querySelector(".signing-in").style.display = "none";
+        document.querySelector(".signing-up").style.display = "none";
         mode = -1;
     }
-    setTimeout("checkIfRes()",100);
+    setTimeout("checkIfRes()",30);
 }
 checkIfRes();

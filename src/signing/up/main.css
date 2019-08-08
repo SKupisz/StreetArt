@@ -5,3 +5,16 @@
 .signing-submitBtn{
   width: 30%;
 }
+@media screen and (max-width: 520px){
+  .signing-mainContent{
+    width: 90%;
+  }
+  .signing-input{
+    width: calc(100% - 10px);
+    margin-bottom: 3px;
+  }
+  .signing-submitBtn{
+    width: 70%;
+    padding: 6px;
+  }
+}

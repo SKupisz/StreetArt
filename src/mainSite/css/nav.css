@@ -9,7 +9,7 @@ a{
   background: #111;
   color: white;
   font-family: 'Lato',sans-serif;
-  z-index: 2;
+  z-index: 3;
 }
 .nav-item{
   height: 67px;
@@ -106,7 +106,7 @@ div[class="nav-item create-dropDown"]:hover .prof-dropItem{
   display: none;
 }
 .forResponsiveMode{
-  display: inline-block;
+  display: none;
 }
 @media screen and (min-width: 983px){
   .albums,.signing-in,.signing-up{
@@ -118,7 +118,7 @@ div[class="nav-item create-dropDown"]:hover .prof-dropItem{
     display: inline-block;
   }
 }
-@media screen and (max-width: 982px){
+@media screen and (max-width: 983px){
   .responsiveMode-open{
     display: inline-block;
     line-height: 13px;

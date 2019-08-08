@@ -98,3 +98,15 @@ button[class="signing-submitBtn"]:hover{
     width: 80%;
   }
 }
+@media screen and (max-width: 520px){
+  .signing-mainContent{
+    width: 90%;
+  }
+  .signing-input{
+    width: calc(100% - 10px);
+    margin-bottom: 3px;
+  }
+}
+@media screen and (max-width: 375px){
+  
+}
