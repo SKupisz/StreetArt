@@ -7,6 +7,7 @@ require_once "../src/profile/logic/loadData.php";
   <head>
     <meta charset="utf-8">
     <title>StreetArt</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
     <link rel = "stylesheet" href = "../src/profile/css/main.css"/>
   </head>
   <body>
@@ -88,7 +89,7 @@ require_once "../src/profile/logic/loadData.php";
     </form>
     </section>
   </section>
-  <section class = "main-content published-folders">
+  <section class = "published-folders">
     <section class = "slides-wrapper">
       <header class = "slides-header">
         Popular slides
