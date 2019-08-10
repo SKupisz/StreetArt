@@ -49,4 +49,5 @@ require_once "../src/show/loadData.php";
     </section>
   </body>
   <script src = "../src/show/main.js"></script>
+  <script src = "../src/mainSite/js/responsiveNav.js"></script> 
 </html>

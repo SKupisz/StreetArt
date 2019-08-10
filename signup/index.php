@@ -57,4 +57,5 @@ if(isset($_SESSION['backData']))
   unset($_SESSION['signup_passrep_error']);
   unset($_SESSION['signup_error']);
   ?>
+  <script src = "../src/mainSite/js/responsiveNav.js"></script>
 </html>

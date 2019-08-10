@@ -117,4 +117,5 @@ require_once "../src/profile/logic/loadData.php";
   </section>
   </body>
   <script src = "../src/profile/main.js"></script>
+  <script src = "../src/mainSite/js/responsiveNav.js"></script>
 </html>

@@ -40,3 +40,21 @@ button[class="albumName-submitBtnPart"]:hover{
 button[class="albumName-submitBtnPart"]:focus{
   outline: none;
 }
+@media screen and (max-width: 768px){
+  .search-menu{
+    width: calc(100% - 10px);
+    margin-right: 0px;
+    padding: 5px;
+    float: none;
+  }
+  .showing-results{
+    width: 100%;
+    float: none;
+    height: 80%;
+  }
+}
+@media screen and (max-width: 509px){
+  .resultsRow{
+    width: 95%;
+  }
+}
