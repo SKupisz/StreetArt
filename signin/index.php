@@ -23,6 +23,9 @@ if(isset($_SESSION["signed_up"]))
       <form method="post" class = "signing-mainContent" action = "../src/signing/in/authorize.php">
         <input type = "text" class = "signing-input" name = "login" required placeholder="Login"/>
         <input type = "password" class = "signing-input" name = "password" required placeholder="Password"/>
+        <div class="forgot-password-wrapper">
+          <a href = "../forgot/" class = "forgot-password">Forgot password?</a>
+        </div>
         <?php if(isset($_SESSION['signin_error'])) {?><div class = "error"><?php echo $_SESSION['signin_error'];?></div><?php }?>
         <button class = "signing-submitBtn" type="submit">
           Sign in
