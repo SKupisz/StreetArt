@@ -28,7 +28,7 @@ try {
     $id = $forIdRow['id'];
     $newDesc = htmlentities($newDesc,ENT_QUOTES,"UTF-8");
     $newDesc = htmlspecialchars($newDesc);
-    $sql = "UPDATE users SET profileDesc = '$newDesc' WHERE id = 1";
+    $sql = "UPDATE users SET profileDesc = '$newDesc' WHERE id = $id";
     $updateDesc = $connection->query($sql);
     if(!$updateDesc) throw new Exception($connection->error);
     mysqli_close($connection);

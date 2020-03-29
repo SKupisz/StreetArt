@@ -33,11 +33,11 @@ $connect["db_password"],$connect["db_name"]);
       $forDescUpdate = $profileDescribe;
     }
     $website = $userDataRow['website'];
+    $quantityOfSlides = $userDataRow["slidersCounter"];
     $mostPopular = $connection->query("SELECT * FROM slides WHERE fromm = '$name' ORDER BY likes LIMIT 3");
     if(!$mostPopular) throw new Exception($connection->error);
     $names = Array();
     $addresses = Array();
-    $quantityOfSlides = $mostPopular->num_rows;
     if($mostPopular->num_rows < 3)
     {
       $stopper = $mostPopular->num_rows;

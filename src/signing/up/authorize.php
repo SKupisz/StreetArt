@@ -74,8 +74,10 @@ else {
         exit();
       }
       $pass = password_hash($pass,PASSWORD_DEFAULT);
+      
       $insert = $connection->query("INSERT INTO users VALUES(NULL,'$login','$email','$pass','No direction yet',0,'No describe','')");
       if(!$insert) throw new Exception($connection->error);
+      
       $showing = $login."_showing";
       $sql = "CREATE TABLE $showing ( id INT NOT NULL AUTO_INCREMENT , date TEXT CHARACTER SET
       utf8 COLLATE utf8_polish_ci NOT NULL ,quantity INT NOT NULL,PRIMARY KEY (id)) ENGINE = InnoDB CHARSET=utf8
@@ -101,7 +103,7 @@ else {
     }
   } catch (Exception $e) {
     $_SESSION['backData'] = [$login,$email,$pass,$passrep];
-    $_SESSION['signup_error'] = "Something went wrong. Try later";
+    $_SESSION['signup_error'] = $e->getMessage();
     header("Location: ../../../signup");
     exit();
   }

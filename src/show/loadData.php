@@ -72,6 +72,7 @@ $connect["db_password"],$connect["db_name"]);
   }
 } catch (Exception $e) {
   $isConnect = 0;
+  echo $e->getMessage();
 }
 $cookieName = $name."_liked";
 ?>
