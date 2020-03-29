@@ -103,7 +103,7 @@ else {
     }
   } catch (Exception $e) {
     $_SESSION['backData'] = [$login,$email,$pass,$passrep];
-    $_SESSION['signup_error'] = $e->getMessage();
+    $_SESSION['signup_error'] = "Something went wrong. Try later ";
     header("Location: ../../../signup");
     exit();
   }
