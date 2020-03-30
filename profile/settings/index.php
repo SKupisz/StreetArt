@@ -8,6 +8,7 @@ require_once "../../src/profile/settings/logic/loadData.php";
     <meta charset="utf-8">
     <title>StreetArt</title>
     <link rel = "stylesheet" href = "../../src/profile/settings/css/main.css"/>
+    <link rel="shortcut icon" type = "image/png" href = "../../src/imgForDecoration/logo.png"/>
   </head>
   <body>
     <?php require_once "../../src/profile/logic/navSupport.php";?>
@@ -83,4 +84,5 @@ require_once "../../src/profile/settings/logic/loadData.php";
       </section>
     </section>
   </body>
+  <script src = "../../src/mainSite/js/responsiveNav.js"></script>
 </html>

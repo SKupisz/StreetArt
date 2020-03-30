@@ -8,6 +8,7 @@ require_once "../../src/profile/show/logic/loadData.php";
     <meta charset="utf-8">
     <title>StreetArt</title>
     <link rel = "stylesheet" href = "../../src/profile/show/css/main.css"/>
+    <link rel="shortcut icon" type = "image/png" href = "../../src/imgForDecoration/logo.png"/>
   </head>
   <body onload = "loadChart()">
   <?php require_once "../../src/profile/logic/navSupport.php";?>
@@ -96,4 +97,5 @@ require_once "../../src/profile/show/logic/loadData.php";
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
   <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <script src = "../../src/profile/show/js/main.js"></script>
+  <script src = "../../src/mainSite/js/responsiveNav.js"></script>
 </html>

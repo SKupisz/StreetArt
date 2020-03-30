@@ -8,6 +8,7 @@ require_once "../src/show/loadData.php";
     <meta charset="utf-8">
     <title>StreetArt</title>
     <link rel = "stylesheet" href = "../src/show/main.css"/>
+    <link rel="shortcut icon" type = "image/png" href = "../src/imgForDecoration/logo.png"/>
   </head>
   <body onload = "readRows()">
     <?php require_once "../src/mainComponents/nav.php";?>
@@ -49,4 +50,5 @@ require_once "../src/show/loadData.php";
     </section>
   </body>
   <script src = "../src/show/main.js"></script>
+  <script src = "../src/mainSite/js/responsiveNav.js"></script>
 </html>

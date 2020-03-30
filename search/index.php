@@ -7,6 +7,7 @@ require_once "../src/searcher/loadData.php";
     <meta charset="utf-8">
     <title>StreetArt</title>
     <link rel = "stylesheet" href = "../src/searcher/css/main.css"/>
+    <link rel="shortcut icon" type = "image/png" href = "../src/imgForDecoration/logo.png"/>
   </head>
   <body>
     <?php require_once "../src/mainComponents/nav.php";?>
@@ -110,4 +111,5 @@ require_once "../src/searcher/loadData.php";
     </section>
   </body>
   <script src = "../src/searcher/main.js"></script>
+  <script src = "../src/mainSite/js/responsiveNav.js"></script>
 </html>

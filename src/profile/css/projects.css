@@ -36,3 +36,38 @@ div[class="one-slide"]:hover{
   color: rgb(200,200,200);
   letter-spacing: 0.03em;
 }
+@media screen and (max-width: 1340px){
+  .one-slide{
+    width: 300px;
+    height: 300px;
+  }
+  .slide-title{
+    font-size: 1.8em;
+  }
+}
+@media screen and (max-width: 1045px){
+  .one-slide{
+    width: 250px;
+    height: 250px;
+  }
+  .slide-title{
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 912px){
+  .slides-wrapper{
+    top: calc(100% - 10px);
+  }
+  .one-slide:nth-child(1){
+    margin-top: 30px;
+  }
+  .one-slide{
+    width: calc(80% - 20px);
+    padding: 10px;
+    height: 80px;
+    background: rgba(200,200,200,.1);
+  }
+  .slide-title{
+    font-size: 1.4em;
+  }
+}

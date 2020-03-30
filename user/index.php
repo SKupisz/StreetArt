@@ -7,6 +7,7 @@ require_once "../src/user/loadData.php";
   <head>
     <meta charset="utf-8">
     <title>StreetArt</title>
+    <link rel="shortcut icon" type = "image/png" href = "../src/imgForDecoration/logo.png"/>
     <link rel = "stylesheet" href = "../src/profile/css/main.css"/>
     <style>
     .failed{
@@ -111,4 +112,5 @@ require_once "../src/user/loadData.php";
       }
       ?>
   </body>
+  <script src = "../src/mainSite/js/responsiveNav.js"></script>
 </html>

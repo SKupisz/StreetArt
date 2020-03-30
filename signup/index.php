@@ -21,6 +21,7 @@ if(isset($_SESSION['backData']))
     <title>StreetArt</title>
     <link rel = "stylesheet" href = "../src/signing/in/main.css"/>
     <link rel = "stylesheet" href = "../src/signing/up/main.css"/>
+    <link rel="shortcut icon" type = "image/png" href = "../src/imgForDecoration/logo.png"/>
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
   </head>
   <body>
@@ -49,6 +50,7 @@ if(isset($_SESSION['backData']))
       </form>
     </section>
   </body>
+  <script src = "../src/mainSite/js/responsiveNav.js"></script>
   <?php
   unset($_SESSION['backData']);
   unset($_SESSION['signup_login_error']);
